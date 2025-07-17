@@ -4,6 +4,6 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Todo-App-TypeScript/',
+  base: '/Todo-App-Typescript/',
   plugins: [react(), tailwindcss()],
 });
