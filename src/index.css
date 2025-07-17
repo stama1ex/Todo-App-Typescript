@@ -1,0 +1,98 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  @apply bg-white text-black dark:bg-gray-900 dark:text-white min-h-screen 
+    transition-colors duration-500;
+}
+
+.dark .ant-input-affix-wrapper {
+  background-color: #1f2937 !important;
+  transition: background-color 0.1s ease-in-out;
+}
+/* Плейсхолдер белый в темной теме */
+.dark .ant-input::placeholder {
+  color: #ffffffb3 !important;
+  transition: color 0.1s ease-in-out;
+}
+
+/* Счётчик символов белый в темной теме */
+.dark .ant-input-show-count-suffix {
+  color: white !important;
+  transition: color 0.1s ease-in-out;
+}
+.dark .ant-input {
+  color: white !important;
+  transition: color 0.1s ease-in-out;
+}
+/* Обертка инпута */
+.ant-input-affix-wrapper {
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+
+/* Сам input */
+.ant-input {
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+
+/* Placeholder */
+.ant-input::placeholder {
+  transition: color 0.2s;
+}
+
+/* Счетчик символов */
+.ant-input-show-count-suffix {
+  transition: color 0.2s;
+}
+
+/* Плавный переход цвета статуса инпута */
+.ant-input-status-error,
+.ant-input-status-warning,
+.ant-input-affix-wrapper-status-error,
+.ant-input-affix-wrapper-status-warning {
+  transition:
+    color 200ms,
+    border-color 200ms;
+}
+
+/* Темная тема для статусов */
+.dark .ant-input-status-error,
+.dark .ant-input-affix-wrapper-status-error {
+  color: #ff6b6b !important;
+  border-color: #ff6b6b !important;
+  transition:
+    color 200ms,
+    border-color 200ms;
+}
+
+.dark .ant-input-status-warning,
+.dark .ant-input-affix-wrapper-status-warning {
+  color: #ffd166 !important;
+  border-color: #ffd166 !important;
+  transition:
+    color 200ms,
+    border-color 200ms;
+}
